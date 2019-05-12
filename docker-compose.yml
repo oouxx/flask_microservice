@@ -1,0 +1,27 @@
+version: '2.1'
+
+services:
+  users-db:
+    container_name: users-db
+    build: ./db
+    ports:
+      - 3307:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=wxx1512
+    healthcheck:
+      test: exit 0
+
+  users-service:
+    container_name: learning_flask
+    build: ./
+    volumes:
+      - '.:/usr/src/app'
+    ports:
+      - 5001:5000
+    environment:
+      - DATABASE_URL=mysql+pymysql://root:wxx1512@users-db:3306/learning_flask
+    depends_on:
+      users-db:
+        condition: service_healthy
+    links:
+      - users-db
