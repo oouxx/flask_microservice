@@ -16,7 +16,7 @@ class TestDevelopmentConfig(TestCase):
         self.assertFalse(current_app is None)
         self.assertTrue(
             app.config['SQLALCHEMY_DATABASE_URI'] ==
-            'mysql+pymysql://root:wxx1512@users-db:3306/learning_flask'
+            'mysql+pymysql://root:wxx1512@localhost:3306/learning_flask'
         )
 
 
@@ -30,7 +30,7 @@ class TestTestingConfig(TestCase):
         self.assertTrue(app.config['DEBUG'])
         self.assertTrue(
             app.config['SQLALCHEMY_DATABASE_URI'] ==
-            'mysql+pymysql://root:wxx1512@users-db:3306/learning_flask'
+            'mysql+pymysql://root:wxx1512@localhost:3306/learning_flask'
         )
 
 

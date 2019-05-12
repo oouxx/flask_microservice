@@ -7,6 +7,6 @@ class Config(object):
     TESTING = True
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_DATABASE_URI = os.environ.get(
-        'DATABASE_URL') or 'mysql+pymysql://root:wxx1512@users-db:3306/learning_flask'
+        'DATABASE_URL') or 'mysql+pymysql://root:wxx1512@localhost:3306/learning_flask'
     # SQLALCHEMY_DATABASE_URI = 'mysql'
     SECRET_KEY = 'you-will-never-guess'
