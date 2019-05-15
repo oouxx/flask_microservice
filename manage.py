@@ -1,6 +1,6 @@
 from MyApp import create_app, db
 import unittest
-from MyApp.models import User, Post
+from MyApp.models import User
 from flask_script import Manager
 import coverage
 

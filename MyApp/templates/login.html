@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+<h1>登录页面</h1>
+<div>
+    <form action="{{ url_for('users.login') }}" method="post">
+        <input type="text" name="username"  placeholder="username" />
+        <input type="text" name="email" placeholder="email" />
+        <input type="password" name="password"  placeholder="password" />
+        <button type="submit" value="登录">登录</button>
+        <button type="reset" value="重置">重置</button>
+    </form>
+</div>
+</body>
+</html>

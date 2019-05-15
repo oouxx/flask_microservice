@@ -1,6 +1,5 @@
 from flask_testing import TestCase
 from MyApp import db
-from MyApp.models import User, Post
 from MyApp import create_app
 app = create_app()
 
@@ -11,8 +10,8 @@ class BaseTestCase(TestCase):
         return app
 
     def setUp(self):
+        from MyApp.models import User
         db.create_all()
-        db.session.commit()
 
     def tearDown(self):
         db.session.remove()

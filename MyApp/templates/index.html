@@ -1,2 +1,23 @@
-{% extends "base.html" %}
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flask_microservice</title>
+</head>
+<body>
+    <h1>Hello! 欢迎来到flask微服务测试首页</h1>
+    <ul>
+        <li>
+            <a href="aboutme.html">关于我</a>
+        </li>
+        <li>
+            <a href="https://github.com/oouxx">我的github</a>
+        </li>
+        <li>
+            <a href="https://oouxx.github.io">我的博客</a>
+        </li>
+    </ul>
+    <h2>快来测试一下登录服务吧</h2>
+    <a href="{{ url_for('users.login') }} ">登录</a>
+</body>
+</html>
